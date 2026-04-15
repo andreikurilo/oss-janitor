@@ -1,0 +1,20 @@
+{
+  "name": "oss-janitor",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b packages/core apps/cli",
+    "clean": "rm -rf node_modules package-lock.json apps/*/dist packages/*/dist *.tsbuildinfo apps/*/*.tsbuildinfo packages/*/*.tsbuildinfo",
+    "dev": "npm run dev -w @oss-janitor/cli",
+    "scan": "node apps/cli/dist/src/index.js scan"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
