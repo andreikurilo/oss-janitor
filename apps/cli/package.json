@@ -1,0 +1,16 @@
+{
+  "name": "@oss-janitor/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "oss-janitor": "dist/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsx --tsconfig tsconfig.json src/index.ts"
+  },
+  "dependencies": {
+    "@oss-janitor/core": "file:../../packages/core"
+  }
+}
